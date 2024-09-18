@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HickHunters.net</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://forms.yandex.ru/_static/embed.js"></script>
+</head>
+<body>
+    <header>
+        <div id="logo" onclick="slowScroll('#top')">
+            <span>HickHunters</span>
+        </div>
+        <div id="about">
+            <a href="#" onclick="slowScroll('#main')" target="Возможности">Возможности</a>
+            <a href="#" onclick="slowScroll('#overview')" title="Преимущества">Преимущества</a>
+            <a href="#" onclick="slowScroll('#contacts')" title="Контакты">Контакты</a>
+            <a href="#" onclick="slowScroll('#faq')" title="Ответы на вопросы">FAQ</a>
+        </div>
+    </header>
+
+    <div id="top">
+        <h1>Анализ данных</h1>
+        <h3>Сайт команды, созданной побеждать</h3>
+    </div>
+
+    <div id="main">
+        <div class="intro">
+            <h2>Наши услуги помогут Вам!</h2>
+            <span>Большой выбор всего, что может вам пригодиться</span>
+        </div>
+        <div class="text">
+            <span>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                Ipsa, illo minus natus optio quas vel minima commodi ipsam 
+                obcaecati molestiae doloribus facere? Aperiam eum ab soluta 
+                velit vitae, quibusdam eaque.
+            </span>
+        </div>
+    </div>
+
+    <div id="overview">
+        <h2>Преимущества</h2>
+        <h4>С нами все понятно</h4>
+        
+        <div class="img">
+            <img src="https://seaborn.pydata.org/_images/different_scatter_variables.png" alt="">
+            <span>Scatterplot with multiple semantics</span>
+        </div>
+        <div class="img">
+            <img src="https://seaborn.pydata.org/_images/horizontal_boxplot.png" alt="">
+            <span>Horizontal boxplot with observations</span>
+        </div>
+        <div class="img">
+            <img src="https://seaborn.pydata.org/_images/many_pairwise_correlations.png" alt="">
+            <span>Plotting a diagonal correlation matrix</span>
+        </div>
+        <div class="img">
+            <img src="https://seaborn.pydata.org/_images/layered_bivariate_plot.png" alt="">
+            <span>Bivariate plot with multiple elements</span>
+        </div>
+    </div>
+
+    <iframe src="https://forms.yandex.ru/cloud/66eaabe5d046883487d35ee2/?iframe=1" frameborder="0" name="ya-form-66eaabe5d046883487d35ee2" id="form"></iframe>
+
+    <div id="faq">
+        <div>
+            <span class="title">Оплата</span><br>
+            <span class="heading">Как будет проходить оплата?</span>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni excepturi, vero repellendus eligendi ea doloribus, 
+                minima nemo reprehenderit eum itaque consectetur iure iusto officia aspernatur ipsum nostrum quos eveniet 
+                repudiandae!</p>
+        </div>
+        <div>
+            <span class="title">Информация</span><br>
+            <span class="heading">Что входит в услуги сервиса?</span>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni excepturi, vero repellendus eligendi ea doloribus, 
+                minima nemo reprehenderit eum itaque consectetur iure iusto officia aspernatur ipsum nostrum quos eveniet 
+                repudiandae!</p>
+        </div>
+        <div>
+            <span class="title">Гарантии</span><br>
+            <span class="heading">Какие есть гарантии?</span>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni excepturi, vero repellendus eligendi ea doloribus, 
+                minima nemo reprehenderit eum itaque consectetur iure iusto officia aspernatur ipsum nostrum quos eveniet 
+                repudiandae!</p>
+            <span class="heading">Победят ли HickHunters?</span>
+            <p>Да.</p>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        function slowScroll(id) {
+            $('html, body').animate({
+                scrollTop: $(id).offset().top
+            }, 500);
+        }
+        $(document).on("scroll", function() {
+            if($(window).scrollTop() === 0)
+                $("header").removeClass("fixed");
+            else
+                $("header").attr("class", "fixed")
+        });
+    </script>
+</body>
+</html>
